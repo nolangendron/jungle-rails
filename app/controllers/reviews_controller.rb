@@ -18,6 +18,7 @@ class ReviewsController < ApplicationController
     redirect_to product
   end
 
+
   def destroy
     review = Review.find params[:id]
     puts review.inspect

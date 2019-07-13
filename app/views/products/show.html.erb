@@ -29,6 +29,7 @@
   </div class="row">
     <div class='col-sm-4'>
       <h3>Reviews:</h3>
+      <h4>Average Rating: <%= @average.to_i %></h4>
       <% if current_user %>
         <%= form_for @product, :url => product_reviews_path(@product), method: 'post' do |f| %>
         <div class="form-group">
@@ -46,13 +47,20 @@
 
   <div class="row">
     <div class='col-sm-8'>
+      <div class="rating-container">
       <% @reviews.each do |review| %>
-        <div class='product-rating'><%= review.description %><br><%= review.rating %>/5<br>
+        <div class='product-rating'><%= review.description %>
+          <span class="rating">
+            <%= review.rating.times do  %>
+            <span class="glyphicon glyphicon-star"></span>
+          <% end %>
+          </span>
           <% if current_user && current_user.id == review.user_id %>
-            <span><%= link_to 'delete', product_review_path(product_id: @product.id, id: review.id), method: 'delete' %></span>
+            <span class="delete-button"><%= link_to 'delete', product_review_path(product_id: @product.id, id: review.id), method: 'delete' %></span>
           <% end %>
         </div>
       <% end %>
+      </div>
     </div>
   </div>
 

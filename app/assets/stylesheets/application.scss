@@ -2,6 +2,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans&display=swap");
 
 // App
 @import "products";
@@ -9,9 +10,76 @@
 // Global
 body {
   padding-top: 70px;
+  font-family: "Noto Sans", sans-serif;
+  h1,
+  h3,
+  h4 {
+    font-family: "Fjalla One", sans-serif;
+    color: #114b5f;
+  }
+}
+
+h1,
+.h1 {
+  font-size: 36px;
+  color: #114b5f;
+}
+
+.page-header {
+  border-bottom-color: #88d498;
 }
 
 // Bootstrap adjustments
 form.button_to {
   display: inline;
+}
+
+.btn-primary {
+  background-color: #88d498;
+  color: #f3e9d2;
+}
+
+.btn-default {
+  color: #1a936f;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+main section.products-index .products .product footer,
+main section.categories-show .products .product footer {
+  background-color: #f3e9d2;
+}
+
+main section.products-index .products .product aside.price,
+main section.categories-show .products .product aside.price {
+  background-color: #f3e9d2;
+}
+
+.price {
+  color: #1a936f;
+}
+
+nav {
+  height: 80px;
+  padding-top: 15px;
+
+  a {
+    font-size: 1.3em;
+  }
+}
+
+.navbar-default {
+  background-color: #1a936f;
+}
+.navbar-brand {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 3em;
+}
+
+.navbar-default .navbar-brand {
+  color: #f3e9d2;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #f3e9d2;
 }

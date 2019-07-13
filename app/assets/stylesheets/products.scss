@@ -35,7 +35,7 @@ main section.categories-show {
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         width: 100%;
-        opacity: 0.3;
+        opacity: 0.6;
         transition: all 0.3s;
       }
 
@@ -81,8 +81,36 @@ main section.products-show {
   }
 }
 
+main section.products-index .products .product,
+main section.categories-show .products .product {
+  border-color: #1a936f;
+}
+
 .product-rating {
-  background-color: #999;
-  font-size: 0.8em;
-  padding: 5px;
+  background-color: #f3e9d2;
+  color: #1a936f;
+  font-size: 1.1em;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 0.5px #1a936f;
+}
+
+.rating {
+  float: right;
+}
+
+.delete-button {
+  float: right;
+  padding-right: 10px;
+}
+
+dt {
+  font-size: 1.3em;
+  padding-bottom: 10px;
+}
+
+dd {
+  font-size: 1.1em;
+  padding-top: 5px;
 }
